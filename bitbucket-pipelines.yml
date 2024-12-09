@@ -8,5 +8,5 @@ pipelines:
           - git config --global user.name "medevkenya"
           # Add GitHub repository as a remote with credentials
           - git remote add github https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/medevkenya/klevertest.git || echo "Remote already exists"
-          # Push all branches to GitHub
+          # Push all branches to GitHubb
           - git push github --all
