@@ -3,7 +3,10 @@ pipelines:
     - step:
         name: Sync to GitHub
         script:
+          # Configure git user details
           - git config --global user.email "medevkenya@gmail.com"
           - git config --global user.name "medevkenya"
-          - git remote add github https://github.com/medevkenya/klevertest.git
+          # Add GitHub repository as a remote with credentials
+          - git remote add github https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/medevkenya/klevertest.git || echo "Remote already exists"
+          # Push all branches to GitHub
           - git push github --all
