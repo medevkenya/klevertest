@@ -5,5 +5,5 @@ pipelines:
         script:
           - git config --global user.email "medevkenya@gmail.com"
           - git config --global user.name "medevkenya"
-          - git remote add github https://gitlab.com/medevkenya/harperbarzar.git
+          - git remote add github https://github.com/medevkenya/klevertest.git
           - git push github --all
